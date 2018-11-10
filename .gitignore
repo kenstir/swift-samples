@@ -1,0 +1,11 @@
+*~
+*~.storyboard
+.DS_Store
+**/xcuserdata/
+
+# see also https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md
+Carthage
+
+# exclude test data
+TestConfig/**
+TestUserData/**
