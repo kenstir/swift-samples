@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# 'carthage update' but with fix to issue https://github.com/TextureGroup/Texture/issues/873
+# courtesy of https://github.com/Saik0s
+
+set -euo pipefail
+IFS=$'\n\t'
+
+xcconfig=$(mktemp /tmp/static.xcconfig.XXXXXX)
+trap 'rm -f "$xcconfig"' INT TERM HUP EXIT
+echo "ONLY_ACTIVE_ARCH[sdk=iphonesimulator*] = YES" >>$xcconfig
+export XCODE_XCCONFIG_FILE="$xcconfig"
+
+carthage update --platform ios $@
