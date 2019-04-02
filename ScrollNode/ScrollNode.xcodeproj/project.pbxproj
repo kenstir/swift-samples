@@ -15,6 +15,8 @@
 		D275C9CB2252D90B00F8C8E3 /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D275C9CA2252D90B00F8C8E3 /* PINOperation.framework */; };
 		D275C9CD2252D91000F8C8E3 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D275C9CC2252D91000F8C8E3 /* PINRemoteImage.framework */; };
 		D275C9D12252E34B00F8C8E3 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D275C9D02252E34B00F8C8E3 /* AsyncDisplayKit.framework */; };
+		D275C9D3225427C200F8C8E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D275C9D2225427C200F8C8E3 /* Main.storyboard */; };
+		D275C9D52254286600F8C8E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D275C9D42254286600F8C8E3 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D275C9CA2252D90B00F8C8E3 /* PINOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINOperation.framework; path = Carthage/Build/iOS/PINOperation.framework; sourceTree = "<group>"; };
 		D275C9CC2252D91000F8C8E3 /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
 		D275C9D02252E34B00F8C8E3 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncDisplayKit.framework; path = Carthage/Build/iOS/AsyncDisplayKit.framework; sourceTree = "<group>"; };
+		D275C9D2225427C200F8C8E3 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D275C9D42254286600F8C8E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +72,10 @@
 				D275C9AF22518D3000F8C8E3 /* AppDelegate.swift */,
 				D275C9B122518D3000F8C8E3 /* ViewController.swift */,
 				D275C9B622518D3200F8C8E3 /* Assets.xcassets */,
-				D275C9B822518D3200F8C8E3 /* LaunchScreen.storyboard */,
 				D275C9BB22518D3200F8C8E3 /* Info.plist */,
+				D275C9B822518D3200F8C8E3 /* LaunchScreen.storyboard */,
+				D275C9D2225427C200F8C8E3 /* Main.storyboard */,
+				D275C9D42254286600F8C8E3 /* MainViewController.swift */,
 			);
 			path = ScrollNode;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D275C9D3225427C200F8C8E3 /* Main.storyboard in Resources */,
 				D275C9BA22518D3200F8C8E3 /* LaunchScreen.storyboard in Resources */,
 				D275C9B722518D3200F8C8E3 /* Assets.xcassets in Resources */,
 			);
@@ -184,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D275C9D52254286600F8C8E3 /* MainViewController.swift in Sources */,
 				D275C9B222518D3000F8C8E3 /* ViewController.swift in Sources */,
 				D275C9B022518D3000F8C8E3 /* AppDelegate.swift in Sources */,
 			);

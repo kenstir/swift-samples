@@ -15,17 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        window?.backgroundColor = UIColor.white
-        window?.makeKeyAndVisible()
-        
-        UINavigationBar.appearance().barTintColor = UIColor(red: 47 / 255.0, green: 184 / 255.0, blue: 253 / 255.0, alpha: 1.0)
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-        
+        let appearance = UINavigationBar.appearance()
+        appearance.tintColor = UIColor.white
+        appearance.barTintColor = UIColor.gray
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            appearance.prefersLargeTitles = true
+            appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        }
         return true
     }
 
