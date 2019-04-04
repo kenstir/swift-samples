@@ -8,8 +8,9 @@
 
 import AsyncDisplayKit
 
-class XViewController: ASViewController<ASScrollNode> {
-    private let scrollNode = ASScrollNode()
+class XViewController: ASViewController<ASDisplayNode> {
+    let containerNode = ASDisplayNode()
+    let scrollNode = ASScrollNode()
     let titleNode = ASTextNode()
     let subtitleNode = ASTextNode()
     let summaryNode = ASTextNode()
@@ -17,7 +18,7 @@ class XViewController: ASViewController<ASScrollNode> {
     //MARK: - Lifecycle
     
     init() {
-        super.init(node: scrollNode)
+        super.init(node: containerNode)
         self.title = "Scroll Node"
         scrollNode.automaticallyManagesSubnodes = true
         scrollNode.automaticallyManagesContentSize = true
@@ -25,6 +26,11 @@ class XViewController: ASViewController<ASScrollNode> {
             let stack = ASStackLayoutSpec.vertical()
             stack.children = [self.titleNode, self.subtitleNode, self.summaryNode]
             return stack
+        }
+        // https://github.com/TextureGroup/Texture/issues/774
+        containerNode.automaticallyManagesSubnodes = true
+        containerNode.layoutSpecBlock = { node, constrainedSize in
+            return ASWrapperLayoutSpec(layoutElement: self.scrollNode)
         }
     }
     
