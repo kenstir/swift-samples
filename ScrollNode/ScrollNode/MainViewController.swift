@@ -30,5 +30,7 @@ class MainViewController: UIViewController {
     
     @objc func buttonPressed(sender: UIButton) {
         print("xzxzxzxzxzxzxzxzxzxzxzx")
+        let vc = XViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
